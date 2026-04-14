@@ -1,0 +1,22 @@
+[workspace]
+resolver = "3"
+members = ["prover", "notary"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+
+[workspace.dependencies]
+anyhow = "1.0.102"
+http-body-util = "0.1.3"
+thiserror = "2.0.18"
+tokio = { version = "1", features = ["full"] }
+tokio-util = { version = "0.7", features = ["compat"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+pin-project-lite = "0.2"
+clap = { version = "4", features = ["derive"] }
+hyper = { version = "1", features = ["http1", "client"] }
+hyper-util = { version = "0.1", features = ["tokio"] }
+webpki-root-certs = "1"
+tlsn = { git = "https://github.com/neotheprogramist/tlsn", branch = "feat/posiedon-m31" }
